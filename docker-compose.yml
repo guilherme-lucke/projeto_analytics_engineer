@@ -1,0 +1,13 @@
+version: '3'
+services:
+  sus-dbt:
+    image: postgres
+    container_name: "pg_container3"
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=sus-dbt
+    ports:
+      - "5432:5432"
+    volumes:
+      - "./sus-dbt:/var/lib/postgresql/data/"
